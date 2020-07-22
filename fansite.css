@@ -1,0 +1,158 @@
+/* nav bar */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+  background: rgb(0, 0, 0);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: url(https://www.uokpl.rs/fpng/f/405-4053663_a-perfect-circle.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 70rem;
+  
+}
+
+h1 a {
+font-size: 1rem;
+color: #ffffff;
+text-decoration: none;
+text-transform: uppercase;
+
+float: left;
+}
+
+.popover {
+ display: none;
+ box-shadow: 0px 6px 8px rgba(19, 19, 19, .7);
+}
+
+.popover:target {
+position: absolute;
+right: 0;
+top: 0;
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.popover .content {
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+width: 0;
+height: 0;
+color: #fff;
+background-color: black;
+animation: 1s grow ease forwards;
+text-align: center;
+}
+
+.nav_list  {
+list-style-type: none;
+}
+
+.nav_list a {
+text-decoration: none;
+font-size: 50px;
+color: #fff;
+}
+
+.nav_list_item {
+height: 100%;
+overflow: hidden;
+}
+
+.nav_list li {
+padding: 15px 0;
+text-transform: uppercase;
+transform: translateY(200px);
+opacity: 0;
+animation: 2s slideUp ease forwards .5s;
+position: relative;
+}
+
+.nav_list li::before {
+content: '';
+position: absolute;
+height: 2px;
+width: 0px;
+left: 0;
+bottom: 10px;
+background: #fff; 
+transition: all 2s ease;
+}
+
+.nav_list li:hover:before {
+    width: 100%;
+}
+
+.popover p {
+padding: 50px;
+opacity: 0;
+animation: 1s fadeIn ease forwards 1s;
+}
+
+.popover .close::after {
+right: 0;
+top: 0;
+width: 50px;
+height: 50px;
+position: absolute;
+display: flex;
+z-index: 1;
+font-size: 30px;
+align-items: center;
+justify-content: center;
+background-color: #ffffff;
+color: rgb(59, 59, 59);
+content: "×";
+cursor: pointer;
+opacity: 0; 
+animation: 1s fadeIn ease forwards .5s;
+}
+
+@keyframes grow {
+100% {
+  height: 90%;
+  width: 90%;
+}
+}
+
+@keyframes fadeIn {
+100% {
+opacity: 1;
+}
+}
+
+@keyframes slideUp {
+100% {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+/*nav bar end*/
+
+/* touch ups on surronding*/
+
+body{
+  background-color: black;
+}
+
+
+footer{
+  background-color: whitesmoke;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
